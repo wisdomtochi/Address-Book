@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/lib/bootstrap/css/bootstrap.css.map" />
+    <link href="~/lib/bootstrap/css/bootstrap.min.css.map" />
+    <link href="~/lib/bootstrap/css/bootstrap.rtl.css.map" />
+    <link href="~/lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="index-navbar">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsiblenavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse lists" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a asp-action="index" asp-controller="home" class="nav-link">List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-action="create" asp-controller="home" class="nav-link">Create</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container item">
+        @RenderBody()
+    </div>
+</body>
+</html>

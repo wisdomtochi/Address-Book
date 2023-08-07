@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Address_Book.Models.Customer>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Employee List";
+}
+
+<div>
+    <h1 style="margin: 0px; text-align: center; font-size: 50px;">ADDRESS BOOK</h1>
+        <table>
+            <thead>
+                <tr>
+                <td class="N">Name</td>
+                <td class="E">Email</td>
+                <td class="A">Address</td>
+                <td class="D">Date Of Birth</td>
+                <td class="P">Phone Number</td>
+                </tr>
+            </thead>
+        </table>
+</div>
+<div>
+    @foreach(var customer in Model)
+    {
+        <div style="margin-left: 89px; border: 1px solid black; width:970px">
+            <div class="card-header" style="text-align: center; margin: 10px;  display: flex;">
+                <p style="width: 40px; margin-right: 40px;">@customer.Name</p>
+                <p style="width: 60px; margin-right: 40px;">@customer.Email</p>
+                <p style="width: 70px; margin-right: 40px;">@customer.Address</p>
+                <p style="width: 30px; margin-right: 40px;">@customer.DateOfBirth</p>
+                <p style="width: 40px; margin-right: 40px;">@customer.PhoneNumber</p>
+            </div>
+            <div class="card-footer" style="margin-left: 10px;">
+                <a asp-controller="home" asp-action="edit" asp-route-id="@customer.Id" class="btn btn-primary m-1">Edit</a>
+                <a href="#" class="btn btn-danger m-1">Delete</a>
+            </div>
+        </div>
+    }
+</div>

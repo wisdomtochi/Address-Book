@@ -1,0 +1,30 @@
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.csproj.AssemblyReference.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.AssemblyInfoInputs.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.AssemblyInfo.cs
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.csproj.CoreCompileInputs.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.RazorAssemblyInfo.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.RazorAssemblyInfo.cs
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\appsettings.Development.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\appsettings.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.exe
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.deps.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.runtimeconfig.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.pdb
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets\msbuild.Address Book.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets\msbuild.build.Address Book.props
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Address Book.props
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Address Book.props
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets.build.json
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\staticwebassets.development.json
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\scopedcss\bundle\Address Book.styles.css
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.dll
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\refint\Address Book.dll
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.pdb
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.genruntimeconfig.cache
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\ref\Address Book.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\libman.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.staticwebassets.runtime.json

@@ -1,0 +1,34 @@
+﻿@using Address_Book.Models
+@model Address_Book.Models.Customer
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Customer Details";
+    //var photoPath = "~/images/" + (Model.PhotoName ?? "noimage.png");
+}
+
+<div class="row justify-content-center details">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1><span>Name:</span> @Model.Name</h1>
+            </div>
+        </div>
+
+        <div class="card-body text-center">
+            <img class="card-img-top mb-4" src="~/images/noimage.png" alt="employee-image" asp-append-version="true" />
+
+            <h4><span>Email:</span> @Model.Email</h4>
+            <h4><span>Address:</span> @Model.Address</h4>
+            <h4><span>Date Of Birth:</span> @Model.DateOfBirth</h4>
+            <h4><span>Phone Number:</span> @Model.PhoneNumber</h4>
+        </div>
+
+        <div class="card-footer text-center mt-3">
+            <a asp-controller="home" asp-action="index" class="btn btn-primary m-1">Back</a>
+            <a asp-controller="home" asp-action="edit" asp-route-id="@Model.Id" class="btn btn-primary m-1">Edit</a>
+            <a href="#" class="btn btn-danger m-1">Delete</a>
+        </div>
+    </div>
+</div>
