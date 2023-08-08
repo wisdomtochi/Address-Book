@@ -6,35 +6,43 @@
     ViewBag.Title = "Employee List";
 }
 
-<div>
-    <h1 style="margin: 0px; text-align: center; font-size: 50px;">ADDRESS BOOK</h1>
-        <table>
-            <thead>
+
+<h1 style="margin-left: 30px; text-align: center; font-size: 50px;">ADDRESS BOOK</h1>
+    <table>
+        <thead>
+            <tr>
+            <td>NAME</td>
+            <td>EMAIL</td>
+            <td>ADDRESS</td>
+            <td>DATE OF BIRTH</td>
+            <td>PHONE NUMBER</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var customer in Model)
+            {
                 <tr>
-                <td class="N">Name</td>
-                <td class="E">Email</td>
-                <td class="A">Address</td>
-                <td class="D">Date Of Birth</td>
-                <td class="P">Phone Number</td>
+                <td style="width: 10%;">@customer.Name</td>
+                <td style="width: 12%;">@customer.Email</td>
+                <td style="width: 15%;">@customer.Address</td>
+                <td style="width: 7%;">@customer.DateOfBirth</td>
+                <td style="width: 7%;" >@customer.PhoneNumber</td>
+                <td style="width: 2%; height: 5%;">
+                    <a asp-controller="home" asp-action="edit" asp-route-id="@customer.Id" class="btn btn-outline-primary">
+                        <img src="~/images/pencil.png" />
+                    </a>
+                    <a href="#" class="btn btn-outline-danger">
+                        <img src="~/images/bin.png" />
+                    </a>
+                </td>
                 </tr>
-            </thead>
-        </table>
-</div>
-<div>
-    @foreach(var customer in Model)
-    {
-        <div style="margin-left: 89px; border: 1px solid black; width:970px">
-            <div class="card-header" style="text-align: center; margin: 10px;  display: flex;">
-                <p style="width: 40px; margin-right: 40px;">@customer.Name</p>
-                <p style="width: 60px; margin-right: 40px;">@customer.Email</p>
-                <p style="width: 70px; margin-right: 40px;">@customer.Address</p>
-                <p style="width: 30px; margin-right: 40px;">@customer.DateOfBirth</p>
-                <p style="width: 40px; margin-right: 40px;">@customer.PhoneNumber</p>
-            </div>
-            <div class="card-footer" style="margin-left: 10px;">
+            }
+        </tbody>
+       
+            @*<div class="card-footer" style="margin-left: 10px;">
                 <a asp-controller="home" asp-action="edit" asp-route-id="@customer.Id" class="btn btn-primary m-1">Edit</a>
                 <a href="#" class="btn btn-danger m-1">Delete</a>
-            </div>
-        </div>
-    }
-</div>
+            </div>*@
+        @*</div>*@
+        
+</table>

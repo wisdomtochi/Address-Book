@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k/r34di1IFFW3R/XIdSfnwV55tfoZTJWMTKg1HAjeoc=",
+  "Hash": "dtLUGTLbmLLGYUipNiZyMqIyw98gs8YTXRYJ9PhKdIk=",
   "Source": "Address Book",
   "BasePath": "_content/Address Book",
   "Mode": "Default",
@@ -34,6 +34,23 @@
       "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
+      "Identity": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\images\\bin.png",
+      "SourceId": "Address Book",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\",
+      "BasePath": "_content/Address Book",
+      "RelativePath": "images/bin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bin.png"
+    },
+    {
       "Identity": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\images\\noimage.png",
       "SourceId": "Address Book",
       "SourceType": "Discovered",
@@ -49,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\noimage.png"
+    },
+    {
+      "Identity": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\images\\pencil.png",
+      "SourceId": "Address Book",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\",
+      "BasePath": "_content/Address Book",
+      "RelativePath": "images/pencil.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pencil.png"
+    },
+    {
+      "Identity": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\images\\view-list.png",
+      "SourceId": "Address Book",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\",
+      "BasePath": "_content/Address Book",
+      "RelativePath": "images/view-list.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\view-list.png"
     },
     {
       "Identity": "C:\\Projects\\Address Book\\Address Book\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",

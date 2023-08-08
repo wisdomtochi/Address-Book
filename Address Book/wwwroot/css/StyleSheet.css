@@ -12,9 +12,9 @@
     margin: 0px 200px;
 }
 
-.lists {
-    display: flex;
-    justify-content: space-between;
+.details{
+    margin-left: 130px;
+    margin-bottom: 30px;
 }
 
 .item {
@@ -31,29 +31,36 @@ span{
     color: crimson;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /*background-color: red;*/
-}
-
-.lists {
-    display: flex;
-    justify-content: space-between;
-}
-
 table{
     margin: 30px 0px 20px 89px;
     width: 970px;
+    text-align: center;
 }
 
 thead {
     margin: 20px;
-    border-bottom: 1px solid black;
+}
+thead td{
+    padding-left: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: bold;
 }
 
-thead td{
-    /*margin: 20px;*/
+tbody tr{
+    margin: 20px 40px;
+    border: 1px solid black;
+}
+
+tbody img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: -5px;
+    padding-right: 5px;
+}
+
+tbody td {
     padding-left: 10px;
     border: 1px solid black;
 }
