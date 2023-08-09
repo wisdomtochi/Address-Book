@@ -8,7 +8,7 @@
         {
             _customerList = new List<Customer>()
             {
-                new Customer(){Id = 1, Name ="James", Address="2, Muyibi Street Olodi Apapa, Lagos", DateOfBirth=new DateOnly(2022,3,1), Email="james@wisdomdev.com", PhoneNumber=222222222}
+                new Customer(){Id = 1, Name ="James", Address="2, Muyibi Street Olodi Apapa, Lagos", DateOfBirth=new DateTime(2022,3,1), Email="james@wisdomdev.com", PhoneNumber=222222222}
             };
         }
 

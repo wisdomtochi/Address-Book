@@ -1,4 +1,5 @@
 ﻿using Address_Book.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Address_Book
 {
@@ -13,8 +14,11 @@ namespace Address_Book
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<AppDbContext>(
+                options => options.UseSqlServer(_config.GetConnectionString("CustomerDBConnection")));
+
             services.AddMvc(options => options.EnableEndpointRouting = false).AddXmlSerializerFormatters();
-            services.AddSingleton<ICustomerRepository, MockCustomerRepository>();
+            services.AddScoped<ICustomerRepository, SQLCustomerRepository>();
             services.AddControllers();
             services.AddControllersWithViews();
         }

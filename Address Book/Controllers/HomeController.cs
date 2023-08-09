@@ -40,7 +40,7 @@ namespace Address_Book.Controllers
         {
             if (ModelState.IsValid)
             {
-                Customer newCustomer = new Customer
+                Customer newCustomer = new()
                 {
                     Name = model.Name,
                     Email = model.Email,
@@ -58,7 +58,7 @@ namespace Address_Book.Controllers
         public ViewResult Edit(int id)
         {
             Customer customer = _customerRepository.GetCustomer(id);
-            CustomerEditViewModel customerEditViewModel = new CustomerEditViewModel
+            CustomerEditViewModel customerEditViewModel = new()
             {
                 Id = customer.Id,
                 Name = customer.Name,

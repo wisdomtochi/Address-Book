@@ -9,7 +9,7 @@ namespace Address_Book.ViewModel
         public string? Name { get; set; }
         [Required]
         [Display(Name = "Date Of Birth")]
-        public DateOnly DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         [Required]
         //[MinLength(11, ErrorMessage = "Address cannot be less than 11 characters")]
         public string? Address { get; set; }

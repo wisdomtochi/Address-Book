@@ -17,16 +17,28 @@
         </div>
 
         <div class="card-body text-center">
-            <img class="card-img-top mb-4" src="~/images/noimage.png" alt="employee-image" asp-append-version="true" />
+            @*<img class="card-img-top mb-4" src="~/images/noimage.png" alt="employee-image" asp-append-version="true" />*@
 
-            <h4><span>Email:</span> @Model.Email</h4>
-            <h4><span>Address:</span> @Model.Address</h4>
-            <h4><span>Date Of Birth:</span> @Model.DateOfBirth</h4>
-            <h4><span>Phone Number:</span> @Model.PhoneNumber</h4>
+            <div>
+            <h3 style="color:crimson;">Email: </h3>
+            <h4>@Model.Email</h4>
+            </div>
+            <div>
+            <h3 style="color:crimson;">Address:</h3>
+            <h4>@Model.Address</h4>
+            </div>
+            <div>
+            <h3 style="color:crimson;">Date Of Birth:</h3>
+            <h4>@Model.DateOfBirth</h4>
+            </div>
+            <div>
+            <h3 style="color:crimson;">Phone Number:</h3>
+            <h4>@Model.PhoneNumber</h4>
+            </div>
         </div>
 
         <div class="card-footer text-center mt-3">
-            <a asp-controller="home" asp-action="index" class="btn btn-primary m-1">Back</a>
+            <a asp-controller="home" asp-action="index" class="btn btn-primary m-1">View List</a>
             <a asp-controller="home" asp-action="edit" asp-route-id="@Model.Id" class="btn btn-primary m-1">Edit</a>
             <a href="#" class="btn btn-danger m-1">Delete</a>
         </div>

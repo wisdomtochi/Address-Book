@@ -13,7 +13,7 @@
 }
 
 .details{
-    margin-left: 130px;
+    margin-left: 170px;
     margin-bottom: 30px;
 }
 
@@ -55,9 +55,9 @@ tbody tr{
 tbody img {
     width: 20px;
     height: 20px;
-    display: block;
-    margin: -5px;
-    padding-right: 5px;
+    display: inline;
+    /*margin: -5px;*/
+    padding-right: -15px;
 }
 
 tbody td {
