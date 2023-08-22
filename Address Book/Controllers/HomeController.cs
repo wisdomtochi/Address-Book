@@ -1,63 +1,60 @@
-﻿using Address_Book.Models;
-using Address_Book.ViewModel;
+﻿using Address_Book.DTO.Read;
+using Address_Book.DTO.Write;
+using Address_Book.Models;
+using Address_Book.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Address_Book.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICustomerRepository _customerRepository;
+        //private readonly ICustomerRepository _customerRepository;
+        private readonly ICustomerService customerService;
 
-        public HomeController(ICustomerRepository customerRepository)
+        public HomeController(ICustomerService customerService)
         {
-            this._customerRepository = customerRepository;
+            //this._customerRepository = customerRepository;
+            this.customerService = customerService;
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var model = _customerRepository.CustomersList();
+            var model = await customerService.GetCustomerList();
             return View(model);
         }
 
         [HttpGet]
-        public IActionResult Details(int? id)
+        public async Task<IActionResult> Details(int customerId)
         {
-            var model = _customerRepository.GetCustomer(id ?? 1);
+            var model = await customerService.GetCustomer(customerId);
             ViewBag.PageTitle = "Employee Details";
             return View(model);
         }
 
         [HttpGet]
-        public IActionResult Create([FromRoute] int id)
+        public IActionResult Create()
         {
-            var customer = _customerRepository.GetCustomer(id);
-            return View(customer);
+            var model = new CustomerCreateViewModel();
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult Create(CustomerCreateViewModel model)
+        [ActionName("Create")]
+        public async Task<IActionResult> Create(CustomerCreateViewModel model)
         {
             if (ModelState.IsValid)
             {
-                Customer newCustomer = new()
-                {
-                    Name = model.Name,
-                    Email = model.Email,
-                    DateOfBirth = model.DateOfBirth,
-                    Address = model.Address,
-                    PhoneNumber = model.PhoneNumber
-                };
-                var customer = _customerRepository.Add(newCustomer);
-                return RedirectToAction("details", new { customer.Id });
+                var customer = await customerService.CreateCustomer(model);
+                return RedirectToAction("details", new { customerId = customer });
             }
-            return View();
+            return View(model);
         }
 
         [HttpGet]
-        public ViewResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            Customer customer = _customerRepository.GetCustomer(id);
+            Customer customer = await customerService.GetCustomer(id);
             CustomerEditViewModel customerEditViewModel = new()
             {
                 Id = customer.Id,
@@ -72,22 +69,25 @@ namespace Address_Book.Controllers
 
 
         [HttpPost]
-        public IActionResult Edit(CustomerEditViewModel model)
+        public async Task<IActionResult> Edit(CustomerEditViewModel model)
         {
             if (ModelState.IsValid)
             {
-                Customer customer = _customerRepository.GetCustomer(model.Id);
-                customer.Name = model.Name;
-                customer.Email = model.Email;
-                customer.DateOfBirth = model.DateOfBirth;
-                customer.Address = model.Address;
-                customer.PhoneNumber = model.PhoneNumber;
-
-                _customerRepository.Update(customer);
+                await customerService.UpdateCustomer(model);
                 return RedirectToAction("index");
             }
-            return View();
+            return View(model);
         }
 
+        public async Task<IActionResult> Delete(int customerId)
+        {
+            Customer model = await customerService.GetCustomer(customerId);
+            if (ModelState.IsValid)
+            {
+                await customerService.DeleteCustomer(model.Id);
+                return RedirectToAction("index");
+            }
+            return View(model);
+        }
     }
 }

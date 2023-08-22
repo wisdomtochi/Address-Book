@@ -22,7 +22,7 @@
             return _customerList.FirstOrDefault(e => e.Id == id);
         }
 
-        public Customer Add(Customer customer)
+        public Customer Create(Customer customer)
         {
             customer.Id = _customerList.Max(e => e.Id) + 1;
             _customerList.Add(customer);

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Address_Book.ViewModel
+namespace Address_Book.DTO.Read
 {
     public class CustomerCreateViewModel
     {

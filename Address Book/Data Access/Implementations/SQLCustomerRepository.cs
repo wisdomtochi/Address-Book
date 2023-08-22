@@ -1,10 +1,12 @@
-﻿namespace Address_Book.Models
+﻿using Address_Book.Data;
+
+namespace Address_Book.Models
 {
     public class SQLCustomerRepository : ICustomerRepository
     {
-        private readonly AppDbContext context;
+        private readonly AddressBookDbContext context;
 
-        public SQLCustomerRepository(AppDbContext context)
+        public SQLCustomerRepository(AddressBookDbContext context)
         {
             this.context = context;
         }
@@ -19,7 +21,7 @@
             return context.Customers.Find(id);
         }
 
-        public Customer Add(Customer customer)
+        public Customer Create(Customer customer)
         {
             context.Customers.Add(customer);
             context.SaveChanges();

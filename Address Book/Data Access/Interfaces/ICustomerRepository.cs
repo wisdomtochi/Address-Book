@@ -4,11 +4,8 @@
     {
         IEnumerable<Customer> CustomersList();
         Customer GetCustomer(int id);
-        Customer Add(Customer customer);
-
+        Customer Create(Customer customer);
         Customer Update(Customer customerChanges);
-
         Customer Delete(int id);
-
     }
 }
