@@ -33,8 +33,11 @@ namespace Address_Book.Services.Implementation
         public async Task DeleteCustomer(int customerId)
         {
             Customer customer = await customerGenericRepository.ReadSingle(customerId);
-            await customerGenericRepository.Delete(customer.Id);
-            await customerGenericRepository.SaveAsync();
+            if (customer != null)
+            {
+                await customerGenericRepository.Delete(customer.Id);
+                await customerGenericRepository.SaveAsync();
+            }
         }
 
         public async Task<Customer> GetCustomer(int customerId)

@@ -2,6 +2,7 @@
 using Address_Book.DTO.Write;
 using Address_Book.Models;
 using Address_Book.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Address_Book.Controllers
@@ -18,6 +19,7 @@ namespace Address_Book.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var model = await customerService.GetCustomerList();
@@ -25,6 +27,7 @@ namespace Address_Book.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int customerId)
         {
             var model = await customerService.GetCustomer(customerId);
