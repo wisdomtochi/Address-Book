@@ -10,7 +10,22 @@
 <h1 style="margin-left:100px;">Manage Roles</h1>
 
 @if(Model.Any()){
-
+    foreach(var role in Model)
+    {
+        <div style="width: 70%; height: 10%; background-color: #cccccc; margin: 30px 0px 30px 200px; padding: 20px;
+                    border-radius: 5px;">
+            <div>
+                Role Id: @role.Id
+            </div>
+            <div style="margin-top: 5px;">
+                <h5>Role Name: @role.Name</h5>
+            </div>
+            <div style="margin-top: 5px;">
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    }
 }
 else{
     <div style="margin-left:100px;">
