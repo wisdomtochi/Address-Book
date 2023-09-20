@@ -14,6 +14,6 @@ namespace Address_Book.Data
 
         public virtual DbSet<Customer> Customers { get; set; }
 
-        public void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
+        protected override void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
     }
 }
