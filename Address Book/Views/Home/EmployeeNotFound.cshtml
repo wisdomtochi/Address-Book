@@ -1,0 +1,18 @@
+﻿@model int
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "404 Error";
+}
+
+<div class="alert alert-danger mt-1 mb-1" style="margin-left: 100px;">
+    <h4>404 Not Found Error : </h4>
+    <hr />
+    <h5>
+        Employee with Id = @Model cannot be found
+    </h5>
+</div>
+<a asp-controller="home" asp-action="index" class="btn btn-outline-success" style="width:auto; margin-left: 100px;">
+    Click here to see the list of all your contacts
+</a>

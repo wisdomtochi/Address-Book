@@ -13,6 +13,15 @@
     <link href="~/lib/bootstrap/css/bootstrap.rtl.css.map" />
     <link href="~/lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/jquery/jquery.min.map" />
+    <link href="~/lib/jquery/jquery.slim.min.map" />
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery.slim.min.js"></script>
+    <script src="~/lib/jquery/jquery.slim.js"></script>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
 
     <link href="~/css/stylesheet.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
@@ -31,6 +40,14 @@
                     <li class="nav-item">
                         <a asp-action="create" asp-controller="home" class="nav-link">Create</a>
                     </li>
+                    @if(signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a asp-action="ListRoles" asp-controller="Administration" class="nav-link">
+                                Manage Roles
+                            </a>
+                        </li>
+                    }
                 </ul>
             </div>
             <ul class="navbar-nav secondNavbarUL">

@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityRole>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Role Management";
+}
+
+<h1 style="margin-left:100px;">Manage Roles</h1>
+
+@if(Model.Any()){
+
+}
+else{
+    <div style="margin-left:100px;">
+        <div class="bg-primary text-white">
+            <h3>There is no admin registered on this device to perform this task</h3>
+            <br>
+            <h4>Use the button below to create a role</h4>
+        </div>
+        <a asp-action="createrole" asp-controller="administration" class="btn btn-outline-primary" 
+                style="width:auto">Create Role
+        </a>
+    </div>
+}

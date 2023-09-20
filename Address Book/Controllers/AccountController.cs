@@ -46,6 +46,22 @@ namespace Address_Book.Controllers
             return View(model);
         }
 
+        [AcceptVerbs("Get", "Post")]
+        [AllowAnonymous]
+        public async Task<IActionResult> IsEmailInUse(string email)
+        {
+            var user = await userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return Json(true);
+            }
+            else
+            {
+                return Json($"Email {email} is already in use");
+            }
+        }
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login()
@@ -64,7 +80,7 @@ namespace Address_Book.Controllers
 
                 if (result.Succeeded)
                 {
-                    if (!string.IsNullOrEmpty(returnUrl))
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                     {
                         return Redirect(returnUrl);
                     }

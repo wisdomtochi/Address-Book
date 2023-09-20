@@ -10,10 +10,10 @@ namespace Address_Book.Services.Interfaces
 
         Task<int> CreateCustomer(CustomerCreateViewModel model);
 
-        Task<Customer> GetCustomer(int customerId);
+        Task<Customer> GetCustomer(int Id);
 
         Task<IEnumerable<Customer>> GetCustomerList();
 
-        Task DeleteCustomer(int customerId);
+        Task DeleteCustomer(int Id);
     }
 }

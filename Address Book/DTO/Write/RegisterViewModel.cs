@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Address_Book.DTO.Write
 {
@@ -6,6 +7,7 @@ namespace Address_Book.DTO.Write
     {
         [Required]
         [EmailAddress]
+        [Remote(action: "IsEmailInUse", controller: "Account")]
         public string? Email { get; set; }
 
         [Required]

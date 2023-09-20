@@ -28,11 +28,17 @@ namespace Address_Book.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Details(int customerId)
+        public async Task<IActionResult> Details(int Id)
         {
-            var model = await customerService.GetCustomer(customerId);
+            var customer = await customerService.GetCustomer(Id);
+
+            if (customer == null)
+            {
+                Response.StatusCode = 404;
+                return View("EmployeeNotFound", Id);
+            }
             ViewBag.PageTitle = "Employee Details";
-            return View(model);
+            return View(customer);
         }
 
         [HttpGet]
@@ -49,12 +55,13 @@ namespace Address_Book.Controllers
             if (ModelState.IsValid)
             {
                 var customer = await customerService.CreateCustomer(model);
-                return RedirectToAction("details", new { customerId = customer });
+                return RedirectToAction("details", new { Id = customer });
             }
             return View(model);
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
         {
             Customer customer = await customerService.GetCustomer(id);
@@ -72,6 +79,7 @@ namespace Address_Book.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(CustomerEditViewModel model)
         {
             if (ModelState.IsValid)
@@ -82,9 +90,10 @@ namespace Address_Book.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Delete(int customerId)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int Id)
         {
-            Customer model = await customerService.GetCustomer(customerId);
+            Customer model = await customerService.GetCustomer(Id);
             if (ModelState.IsValid)
             {
                 await customerService.DeleteCustomer(model.Id);

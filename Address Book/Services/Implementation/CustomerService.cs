@@ -30,9 +30,9 @@ namespace Address_Book.Services.Implementation
             return customer.Id;
         }
 
-        public async Task DeleteCustomer(int customerId)
+        public async Task DeleteCustomer(int Id)
         {
-            Customer customer = await customerGenericRepository.ReadSingle(customerId);
+            Customer customer = await customerGenericRepository.ReadSingle(Id);
             if (customer != null)
             {
                 await customerGenericRepository.Delete(customer.Id);
@@ -40,9 +40,9 @@ namespace Address_Book.Services.Implementation
             }
         }
 
-        public async Task<Customer> GetCustomer(int customerId)
+        public async Task<Customer> GetCustomer(int Id)
         {
-            Customer customer = await customerGenericRepository.ReadSingle(customerId);
+            Customer customer = await customerGenericRepository.ReadSingle(Id);
             return customer;
         }
 

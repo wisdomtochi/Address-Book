@@ -11,11 +11,10 @@ namespace Address_Book.DTO.Read
         [Display(Name = "Date Of Birth")]
         public DateTime DateOfBirth { get; set; }
         [Required]
-        //[MinLength(11, ErrorMessage = "Address cannot be less than 11 characters")]
         public string? Address { get; set; }
         [Required]
         [Display(Name = "Phone Number: ")]
-        //[MaxLength(13, ErrorMessage = "Phone Number length must equal to 11")]
+        //[StringLength(11, ErrorMessage = "Phone Number length must equal to 10")]
         public int PhoneNumber { get; set; }
         [Required]
         public string? Email { get; set; }
