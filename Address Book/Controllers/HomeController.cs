@@ -9,12 +9,10 @@ namespace Address_Book.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerService customerService;
 
         public HomeController(ICustomerService customerService)
         {
-            //this._customerRepository = customerRepository;
             this.customerService = customerService;
         }
 

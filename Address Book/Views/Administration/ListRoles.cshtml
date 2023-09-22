@@ -9,33 +9,36 @@
 
 <h1 style="margin-left:100px;">Manage Roles</h1>
 
+<a asp-action="CreateRole" asp-controller="Administration" class="btn btn-primary mb-3" style="width:auto;margin-left:100px;">
+    Add New Role
+</a>
+
 @if(Model.Any()){
     foreach(var role in Model)
     {
-        <div style="width: 70%; height: 10%; background-color: #cccccc; margin: 30px 0px 30px 200px; padding: 20px;
+
+        <div style="width: 70%; height: 10%; background-color: #cccccc; margin: 30px 0px 30px 100px; padding: 20px;
                     border-radius: 5px;">
-            <div>
-                Role Id: @role.Id
+            <div style="margin-top: 5px;">
+                <h5>Role Id: @role.Id</h5>
             </div>
             <div style="margin-top: 5px;">
                 <h5>Role Name: @role.Name</h5>
             </div>
-            <div style="margin-top: 5px;">
-                <a href="#" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+            <br>
+            <div style="margin-top: 8px;">
+                <a asp-action="EditRole" asp-controller="Administration" asp-route-Id="@role.Id" class="btn btn-primary" style="width:auto;">Add new @role.Name</a>
+                <a href="#" class="btn btn-danger" style="width:auto;">Delete Role</a>
             </div>
         </div>
     }
 }
 else{
     <div style="margin-left:100px;">
-        <div class="bg-primary text-white">
-            <h3>There is no admin registered on this device to perform this task</h3>
+        <div class="p-2" style="color: lightgray; background-color: red; border-radius: 8px">
+            <h3>There is no role on this device.</h3>
             <br>
-            <h4>Use the button below to create a role</h4>
+            <h4>Try Adding A New Role</h4>
         </div>
-        <a asp-action="CreateRole" asp-controller="Administration" class="btn btn-outline-primary" style="width:auto">
-            Create Role
-        </a>
     </div>
 }

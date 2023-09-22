@@ -49,5 +49,11 @@ namespace Address_Book.Controllers
             var roles = roleManager.Roles;
             return View(roles);
         }
+
+        [HttpPost]
+        public IActionResult EditRole()
+        {
+            return View();
+        }
     }
 }
