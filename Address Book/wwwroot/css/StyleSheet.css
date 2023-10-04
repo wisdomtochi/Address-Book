@@ -79,3 +79,13 @@ tbody td {
 .btn-width{
     width: auto;
 }
+
+.editRoleForm .firstDiv{
+    margin: 40px;
+}
+
+.editRoleForm input {
+    margin-right: 30px;
+    flex-wrap: nowrap;
+    width: 45vw;
+}

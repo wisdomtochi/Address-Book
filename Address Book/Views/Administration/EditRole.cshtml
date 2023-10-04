@@ -1,1 +1,37 @@
-﻿
+﻿@model Address_Book.DTO.Write.EditRoleViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Edit Role";
+}
+
+<h1 style="margin-left: 100px;">Edit Role</h1>
+
+<form method="post" class="editRoleForm">
+    <div class="firstDiv">
+        <div>
+            <label asp-for="Id">Your ID:- </label> 
+            <input asp-for="Id" disabled/>
+        </div>
+
+        <div>
+            <label asp-for="RoleName">Your Rolename:- </label> 
+            <input asp-for="RoleName" disabled/>
+        </div>
+    </div>
+
+    <div>
+        <h3 style="text-align:center;">Users In This Role</h3>
+        <hr />
+        @if (Model.Users.Any())
+        {
+            foreach(var user in Model.Users)
+            {
+                <h5>@user</h5>
+            }
+        }else{
+            <h5>None at the moment</h5>
+        }
+    </div>
+</form>
