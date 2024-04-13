@@ -9,61 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Address_Book
 build_property.RootNamespace = Address_Book
-build_property.ProjectDir = C:\Projects\Address Book\Address Book\
+build_property.ProjectDir = C:\Code Involved Projects\Address Book\Address Book\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Projects\Address Book\Address Book
+build_property.MSBuildProjectDirectory = C:\Code Involved Projects\Address Book\Address Book
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Projects/Address Book/Address Book/Views/Account/Login.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Account/Register.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Administration/CreateRole.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Administration/CreateRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQ3JlYXRlUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Administration/EditRole.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Administration/EditRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRWRpdFJvbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Administration/ListRoles.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Administration/ListRoles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cTGlzdFJvbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Home/Create.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Home/Details.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Home/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Home/Edit.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Home/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Home/EmployeeNotFound.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Home/EmployeeNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbXBsb3llZU5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Home/Index.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Shared/NotFound.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Shared/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Shared/_Layout.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Address Book/Address Book/Views/Shared/_ViewImports.cshtml]
+[C:/Code Involved Projects/Address Book/Address Book/Views/Shared/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

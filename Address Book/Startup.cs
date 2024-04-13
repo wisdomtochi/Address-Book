@@ -1,8 +1,8 @@
-﻿using Address_Book.Data;
-using Address_Book.Data_Access.Implementations;
-using Address_Book.Data_Access.Interfaces;
-using Address_Book.Services.Implementation;
-using Address_Book.Services.Interfaces;
+﻿using Address_Book.Data.DataAccess.Implementations;
+using Address_Book.Data.DataAccess.Interfaces;
+using Address_Book.Data.DataContext;
+using Address_Book.Services.Customers.Implementation;
+using Address_Book.Services.Customers.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;

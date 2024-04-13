@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Address Book", "Address Book\Address Book.csproj", "{2B37C5B2-7B35-412E-9F8D-DB1196A52378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Address Book", "Address Book\Address Book.csproj", "{2B37C5B2-7B35-412E-9F8D-DB1196A52378}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{AF9D7620-F3EB-4BB1-83D5-C4B92B91CA2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Address Book.Data", "Data\Address Book.Data.csproj", "{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AF463F1E-3208-40AC-AE6F-B6C0CB4E2216}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Address Book.Services", "Services\Address Book.Services.csproj", "{BCD20746-6065-451C-9602-00975377D530}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{80795297-62AD-46B2-8A2D-AFD57DF0A1B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Address Book.Domain", "Address Book.Domain\Address Book.Domain.csproj", "{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{93E3EACD-2186-4E86-BA93-4A216E186E5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,27 @@ Global
 		{2B37C5B2-7B35-412E-9F8D-DB1196A52378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B37C5B2-7B35-412E-9F8D-DB1196A52378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B37C5B2-7B35-412E-9F8D-DB1196A52378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD20746-6065-451C-9602-00975377D530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD20746-6065-451C-9602-00975377D530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD20746-6065-451C-9602-00975377D530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD20746-6065-451C-9602-00975377D530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B37C5B2-7B35-412E-9F8D-DB1196A52378} = {93E3EACD-2186-4E86-BA93-4A216E186E5E}
+		{42CE1FC1-2208-4840-BADD-3AF9F5B2DEB3} = {AF9D7620-F3EB-4BB1-83D5-C4B92B91CA2E}
+		{BCD20746-6065-451C-9602-00975377D530} = {AF463F1E-3208-40AC-AE6F-B6C0CB4E2216}
+		{16CA9C89-E4F7-4389-8C01-0D5F34C66DDB} = {80795297-62AD-46B2-8A2D-AFD57DF0A1B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1E29022-761F-4042-9BDF-0A6E94D38639}

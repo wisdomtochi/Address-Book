@@ -1,7 +1,6 @@
-﻿using Address_Book.DTO.Read;
-using Address_Book.DTO.Write;
-using Address_Book.Models;
-using Address_Book.Services.Interfaces;
+﻿using Address_Book.Domain;
+using Address_Book.Services.Customers.Interfaces;
+using Address_Book.Services.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
