@@ -1,12 +1,12 @@
-﻿using Address_Book.Services.ViewModels;
+﻿using Address_Book.Services.Helpers;
 
 namespace Address_Book.Services.Administration.Interface
 {
     public interface IAdminService
     {
-        (bool status, string message) CreateRole(CreateRoleViewModel model);
-        (bool status, string message) EditRole(string id);
-        (bool status, string message) DeleteRole(string id);
-
+        Task<bool> IsEmailInUse(string email);
+        Task<Result> Register(string firstname, string lastname, string email, string password);
+        Task<Result> Login(string email, string password, bool rememberMe);
+        Task Logout();
     }
 }

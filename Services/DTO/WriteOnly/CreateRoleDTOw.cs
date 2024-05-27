@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Address_Book.Services.ViewModels
+namespace Address_Book.Services.DTO.WriteOnly
 {
-    public class CreateRoleViewModel
+    public class CreateRoleDTOw
     {
         [Required]
         public string? RoleName { get; set; }

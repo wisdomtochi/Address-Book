@@ -1,18 +1,18 @@
 ﻿using Address_Book.Domain;
-using Address_Book.Services.ViewModels;
+using Address_Book.Services.DTO.WriteOnly;
 
 namespace Address_Book.Services.Customers.Interfaces
 {
     public interface ICustomerService
     {
-        Task UpdateCustomer(CustomerEditViewModel model);
+        Task UpdateCustomer(CustomerEditDTOw model);
 
-        Task<Customer> CreateCustomer(CustomerCreateViewModel model);
+        Task<Customer> CreateCustomer(CustomerCreateDTOw model);
 
-        Task<Customer> GetCustomer(int Id);
+        Task<Customer> GetCustomer(Guid Id);
 
         Task<List<Customer>> GetCustomerList();
 
-        Task DeleteCustomer(int Id);
+        Task DeleteCustomer(Guid Id);
     }
 }

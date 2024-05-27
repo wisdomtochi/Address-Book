@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Address_Book.Services.ViewModels
+namespace Address_Book.Services.DTO.WriteOnly
 {
-    public class LoginViewModel
+    public class LoginDTOw
     {
         [Required]
         [EmailAddress]

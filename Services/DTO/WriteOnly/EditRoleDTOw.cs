@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Address_Book.Services.ViewModels
+namespace Address_Book.Services.DTO.WriteOnly
 {
-    public class EditRoleViewModel
+    public class EditRoleDTOw
     {
-        public EditRoleViewModel()
+        public EditRoleDTOw()
         {
             Users = new List<string>();
         }

@@ -4,8 +4,8 @@
     {
         Task<T> Create(T model);
         void Update(T update);
-        Task Delete(int id);
-        Task<T> ReadSingle(int id);
+        Task Delete(Guid id);
+        Task<T> ReadSingle(Guid id);
         Task<IEnumerable<T>> ReadAll();
 
         Task<bool> SaveAsync();

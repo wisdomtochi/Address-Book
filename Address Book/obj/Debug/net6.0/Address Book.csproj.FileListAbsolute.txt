@@ -62,7 +62,6 @@ C:\Projects\Address Book\Address Book\bin\Debug\net6.0\runtimes\win\lib\netcorea
 C:\Projects\Address Book\Address Book\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Projects\Address Book\Address Book\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projects\Address Book\Address Book\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.csproj.CopyComplete
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\appsettings.Development.json
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\appsettings.json
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\libman.json
@@ -151,3 +150,27 @@ C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\Address Boo
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Domain.pdb
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Data.pdb
 C:\Code Involved Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Services.pdb
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address Book.sourcelink.json
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Data.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Domain.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Services.dll
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Domain.pdb
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Data.pdb
+C:\Projects\Address Book\Address Book\bin\Debug\net6.0\Address Book.Services.pdb
+C:\Projects\Address Book\Address Book\obj\Debug\net6.0\Address .57687CB9.Up2Date

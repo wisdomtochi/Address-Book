@@ -1,4 +1,4 @@
-﻿using Address_Book.Services.ViewModels;
+﻿using Address_Book.Services.DTO.WriteOnly;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,23 +23,20 @@ namespace Address_Book.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
+        public async Task<IActionResult> CreateRole(CreateRoleDTOw model)
         {
-            if (ModelState.IsValid)
+            IdentityRole identityRole = new() { Name = model.RoleName };
+
+            IdentityResult result = await roleManager.CreateAsync(identityRole);
+
+            if (result.Succeeded)
             {
-                IdentityRole identityRole = new IdentityRole { Name = model.RoleName };
+                return RedirectToAction("ListRoles", "Administration");
+            }
 
-                IdentityResult result = await roleManager.CreateAsync(identityRole);
-
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("ListRoles", "Administration");
-                }
-
-                foreach (IdentityError error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
+            foreach (IdentityError error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
             }
 
             return View(model);
@@ -47,7 +44,7 @@ namespace Address_Book.Controllers
 
         [HttpGet]
         //[Authorize(Roles = "Admin")]
-        public IActionResult ListRoles()
+        public IActionResult ListAllRoles()
         {
             var roles = roleManager.Roles;
             return View(roles);
@@ -64,7 +61,7 @@ namespace Address_Book.Controllers
                 return View("NotFound");
             }
 
-            var model = new EditRoleViewModel
+            var model = new EditRoleDTOw
             {
                 Id = role.Id,
                 RoleName = role.Name,

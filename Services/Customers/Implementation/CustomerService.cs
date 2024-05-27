@@ -1,7 +1,7 @@
 ﻿using Address_Book.Data.DataAccess.Interfaces;
 using Address_Book.Domain;
 using Address_Book.Services.Customers.Interfaces;
-using Address_Book.Services.ViewModels;
+using Address_Book.Services.DTO.WriteOnly;
 
 namespace Address_Book.Services.Customers.Implementation
 {
@@ -14,11 +14,12 @@ namespace Address_Book.Services.Customers.Implementation
             this.customerGenericRepository = customerGenericRepository;
         }
 
-        public async Task<Customer> CreateCustomer(CustomerCreateViewModel model)
+        public async Task<Customer> CreateCustomer(CustomerCreateDTOw model)
         {
             Customer customer = new()
             {
-                Name = model.Name,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
                 Email = model.Email,
                 DateOfBirth = model.DateOfBirth,
                 Address = model.Address,
@@ -29,7 +30,7 @@ namespace Address_Book.Services.Customers.Implementation
             return customer;
         }
 
-        public async Task DeleteCustomer(int Id)
+        public async Task DeleteCustomer(Guid Id)
         {
             Customer customer = await customerGenericRepository.ReadSingle(Id);
 
@@ -37,7 +38,7 @@ namespace Address_Book.Services.Customers.Implementation
             await customerGenericRepository.SaveAsync();
         }
 
-        public async Task<Customer> GetCustomer(int Id)
+        public async Task<Customer> GetCustomer(Guid Id)
         {
             Customer customer = await customerGenericRepository.ReadSingle(Id);
 
@@ -52,12 +53,12 @@ namespace Address_Book.Services.Customers.Implementation
             return customers.ToList();
         }
 
-        public async Task UpdateCustomer(CustomerEditViewModel model)
+        public async Task UpdateCustomer(CustomerEditDTOw model)
         {
             try
             {
                 Customer customer = await customerGenericRepository.ReadSingle(model.Id);
-                customer.Name = model.Name;
+                customer.FirstName = model.FirstName;
                 customer.Email = model.Email;
                 customer.DateOfBirth = model.DateOfBirth;
                 customer.Address = model.Address;

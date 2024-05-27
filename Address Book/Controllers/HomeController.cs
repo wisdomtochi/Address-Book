@@ -1,6 +1,6 @@
 ﻿using Address_Book.Domain;
 using Address_Book.Services.Customers.Interfaces;
-using Address_Book.Services.ViewModels;
+using Address_Book.Services.DTO.WriteOnly;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +25,7 @@ namespace Address_Book.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Details(int Id)
+        public async Task<IActionResult> Details(Guid Id)
         {
             var customer = await customerService.GetCustomer(Id);
 
@@ -41,13 +41,13 @@ namespace Address_Book.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var model = new CustomerCreateViewModel();
+            var model = new CustomerCreateDTOw();
             return View(model);
         }
 
         [HttpPost]
         [ActionName("Create")]
-        public async Task<IActionResult> Create(CustomerCreateViewModel model)
+        public async Task<IActionResult> Create(CustomerCreateDTOw model)
         {
             if (ModelState.IsValid)
             {
@@ -59,13 +59,14 @@ namespace Address_Book.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(Guid id)
         {
             Customer customer = await customerService.GetCustomer(id);
-            CustomerEditViewModel customerEditViewModel = new()
+            CustomerEditDTOw customerEditViewModel = new()
             {
                 Id = customer.Id,
-                Name = customer.Name,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
                 DateOfBirth = customer.DateOfBirth,
                 Address = customer.Address,
                 PhoneNumber = customer.PhoneNumber,
@@ -77,7 +78,7 @@ namespace Address_Book.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(CustomerEditViewModel model)
+        public async Task<IActionResult> Edit(CustomerEditDTOw model)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +89,7 @@ namespace Address_Book.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Delete(int Id)
+        public async Task<IActionResult> Delete(Guid Id)
         {
             Customer model = await customerService.GetCustomer(Id);
             if (ModelState.IsValid)

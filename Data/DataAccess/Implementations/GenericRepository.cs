@@ -22,7 +22,7 @@ namespace Address_Book.Data.DataAccess.Implementations
             return model;
         }
 
-        public async Task Delete(int id)
+        public async Task Delete(Guid id)
         {
             var entity = await _dbSet.FindAsync(id);
             _dbSet.Remove(entity);
@@ -33,7 +33,7 @@ namespace Address_Book.Data.DataAccess.Implementations
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> ReadSingle(int id)
+        public async Task<T> ReadSingle(Guid id)
         {
             return await _dbSet.FindAsync(id);
         }
